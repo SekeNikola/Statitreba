@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.statitreba.rs/dashboard/pages/register by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jan 2018 20:15:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Šta ti treba | Registracija</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="../plugins/iCheck/square/blue.css">
+  <meta name="author" content="Luka_Bn@hotmail.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition register-page">
+<div class="register-box" style="margin-top: 10px;">
+  <div class="register-logo">
+    <img src="../dist/img/stt.png" style="width: 30%; height: 30%"><br>
+    <a href="../../index.html"><b>Šta ti treba</b></a>
+  </div>
+
+  <div class="register-box-body">
+    <h3 class="login-box-msg">Registruj se!</h3>
+
+    <!--<form method="post">-->
+      <form role="form" action="https://www.statitreba.rs/dashboard/pages/register.php" method="post" enctype="multipart/form-data" id="img">
+            <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="ime-prezime" placeholder="Ime i prezime/naziv kompanije" required>
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="delatnost" placeholder="Delatnost">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="txt_uname" placeholder="Korisničko ime" required>
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" name="txt_upass" placeholder="Lozinka (minimalno 6 karaktera)" required>
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" name="txt_upass_again" placeholder="Ponovite lozinku" required>
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <p>Ubacite logo ukoliko ga imate</p>
+        <!--<input type="text" class="form-control" name="logo" placeholder="Ubacite link Vaše slike ili logo firme (opciono)">-->
+        <input type="file" id="file" name="files[]" multiple="multiple" accept="image/*" />
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group">
+        <select class="form-control" name="regija" required>
+          <option disabled selected value>Okrug</option>
+<option value="">Sve</option>
+<option value="Borski - Bor, Majdampek, Kladovo, Negotin">Borski - Bor, Majdampek, Kladovo, Negotin</option>
+<option value="Braničevski - Požarevac, Kostolac, V. Gradište">Braničevski - Požarevac, Kostolac, V. Gradište</option>
+<option value="Beograd - Barajevo">Beograd - Barajevo</option>
+<option value="Beograd - Voždovac">Beograd - Voždovac</option>
+<option value="Beograd - Vračar">Beograd - Vračar</option>
+<option value="Beograd - Grocka">Beograd - Grocka</option>
+<option value="Beograd - Zvezdara">Beograd - Zvezdara</option>
+<option value="Beograd - Zemun">Beograd - Zemun</option>
+<option value="Beograd - Lazarevac">Beograd - Lazarevac</option>
+<option value="Beograd - Mladenovac">Beograd - Mladenovac</option>
+<option value="Beograd - Novi Beograd">Beograd - Novi Beograd</option>
+<option value="Beograd - Obrenovac">Beograd - Obrenovac</option>
+<option value="Beograd - Palilula">Beograd - Palilula</option>
+<option value="Beograd - Rakovica">Beograd - Rakovica</option>
+<option value="Beograd - Savski venac">Beograd - Savski venac</option>
+<option value="Beograd - Sopot">Beograd - Sopot</option>
+<option value="Beograd - Stari grad">Beograd - Stari grad</option>
+<option value="Beograd - Surčin">Beograd - Surčin</option>
+<option value="Beograd - Čukarica">Beograd - Čukarica</option>
+<option value="Zaječarski - Zaječar, Knaževac, Sokobanja, Boljevac">Zaječarski - Zaječar, Knaževac, Sokobanja, Boljevac</option>
+<option value="Zapadnobački - Sombor, Apatin, Kula, Odžaci">Zapadnobački - Sombor, Apatin, Kula, Odžaci</option>
+<option value="Zlatiborski - Užice, Arilje, Požega, Priboj, Prijepolje">Zlatiborski - Užice, Arilje, Požega, Priboj, Prijepolje</option>
+<option value="Jablanički - Leskovac, Lebane, Vlasotince, Medveđa">Jablanički - Leskovac, Lebane, Vlasotince, Medveđa</option>
+<option value="Južnobanatski - Pančevo, Vršac, Kovin, Opovo">Južnobanatski - Pančevo, Vršac, Kovin, Opovo</option>
+<option value="Južnobački - Vrbas, S. Karlovci, Bečej, B. Palanka, S. Karlovci">Južnobački - Vrbas, S. Karlovci, Bečej, B. Palanka, S. Karlovci</option>
+<option value="Kolubarski - Valjevo, Ljig, Mionica, Lajkovac, Osečina, Ub">Kolubarski - Valjevo, Ljig, Mionica, Lajkovac, Osečina, Ub</option>
+<option value="Kosovo i Metohija">Kosovo i Metohija</option>
+<option value="Mačvanski - Šabac, Loznica, Ljubovija, Bogatić, M. Zvornik">Mačvanski - Šabac, Loznica, Ljubovija, Bogatić, M. Zvornik</option>
+<option value="Moravički - Čačak, G. Milanovac, Ivanjica, Lučani">Moravički - Čačak, G. Milanovac, Ivanjica, Lučani</option>
+<option value="Niš - grad">Niš - grad</option>
+<option value="Nišavski - Aleksinac, Ražanj, Svrljig, Gadžin Han">Nišavski - Aleksinac, Ražanj, Svrljig, Gadžin Han</option>
+<option value="Novi Sad - grad, Petrovaradin">Novi Sad - grad, Petrovaradin</option>
+<option value="Pirotski - Pirot, Babušnica, Dimitrovgrad, B. Palanka">Pirotski - Pirot, Babušnica, Dimitrovgrad, B. Palanka</option>
+<option value="Podunavski - Smederevo, V. Plana, S. Palanka">Podunavski - Smederevo, V. Plana, S. Palanka</option>
+<option value="Pomoravski - Jagodina, Paraćin, Ćuprija, Rekovac, Svilajnac">Pomoravski - Jagodina, Paraćin, Ćuprija, Rekovac, Svilajnac</option>
+<option value="Pčinjski - Vranje, Surdulica, Bosilegrad, V.  Han, Preševo">Pčinjski - Vranje, Surdulica, Bosilegrad, V.  Han, Preševo</option>
+<option value="Rasinski - Kruševac, Trstenik, Brus. Aleksandrovac, Varvarin">Rasinski - Kruševac, Trstenik, Brus. Aleksandrovac, Varvarin</option>
+<option value="Severnobanatski - Kikinda, Ada, Semta, Čoka, Kanjiža">Severnobanatski - Kikinda, Ada, Semta, Čoka, Kanjiža</option>
+<option value="Severnobački - Subotica, B. Topola, M. Iđoš">Severnobački - Subotica, B. Topola, M. Iđoš</option>
+<option value="Srednjebanatski - Zrenjenin, N. Bečej, Žitište, Sečanj">Srednjebanatski - Zrenjenin, N. Bečej, Žitište, Sečanj</option>
+<option value="Sremski - S. Mitrovica, Ruma, Indjija, Šid, Irig, S. Pazova, Pećinci">Sremski - S. Mitrovica, Ruma, Indjija, Šid, Irig, S. Pazova, Pećinci</option>
+<option value="Toplički - Prokuplje, Blace, Kuršumlija, Žitorađa">Toplički - Prokuplje, Blace, Kuršumlija, Žitorađa</option>
+<option value="Šumadijski - Kragujevac, Aranđelovac, Lapovo, Topola, Rača">Šumadijski - Kragujevac, Aranđelovac, Lapovo, Topola, Rača</option>
+
+
+        </select>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="txt_adr" placeholder="Ulica i broj" required>
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="m_pbr" placeholder="Mesto i poštanski broj" required>
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="txt_tel" placeholder="Fiksni telefon">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="txt_mob" placeholder="*Moblini telefon">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="txt_umail" placeholder="email (*ako nemate email ukucajte 0)" required>
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      
+      <div class="form-group has-feedback">
+        <label>BEZ www i http</label>
+        <input type="text" class="form-control" name="sajt" placeholder="Web sajt (*ako nemate sajt ukucajte 0)" required>
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="checkbox">
+          <input type="checkbox" name="uslovi_koriscenja"> <a href="../dokumenti/uslovi.html" target="_blank">Prihvatam uslove korišćenja</a>
+      </div><br>
+      <div class="row">
+        <div class="col-xs-8">
+          <input action="https://www.statitreba.rs/dashboard/pages/action" class="btn btn-primary btn-flat" onclick="window.history.go(-1); return false;" type="button" value="Nazad" />
+          <button type="submit" class="btn btn-primary btn-flat" onclick="window.location.href='login.html'">Već imam nalog</button>
+        </div>
+        <div class="col-xs-4">
+          <button type="submit" class="btn btn-primary btn-block btn-flat" name="btn-signup">Registruj se</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+  </div>
+  <!-- /.form-box -->
+</div>
+<!-- /.register-box -->
+
+<!-- jQuery 3 -->
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="../plugins/iCheck/icheck.min.js"></script>
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+    });
+  });
+</script>
+</body>
+
+<!-- Mirrored from www.statitreba.rs/dashboard/pages/register by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jan 2018 20:15:09 GMT -->
+</html>

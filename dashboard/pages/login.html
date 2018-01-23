@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.statitreba.rs/dashboard/pages/login by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jan 2018 20:15:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ŠTT | Log in</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+  <meta name="author" content="Luka Ilić - Luka_Bn@hotmail.com">
+  <link rel="stylesheet" href="../plugins/iCheck/square/blue.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <script type="text/javascript">
+    function nazad() {
+      window.history.back();
+    }
+  </script>
+</head>
+<body class="hold-transition login-page">
+<div class="login-box" style="margin-top: 10px;">
+  <div class="login-logo">
+    <img src="../dist/img/stt.png" style="width: 30%; height: 30%"><br>
+    <a href="../../index.html"><b>Šta ti treba</b></a>
+  </div>
+  <div class="login-box-body">
+    <p class="login-box-msg">Prijavi se:</p>
+        <form method="post">
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" placeholder="Email ili user name" name="txt_uname_email">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" placeholder="Password" name="txt_password">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+          <input action="https://www.statitreba.rs/dashboard/pages/action" class="btn btn-primary btn-flat" onclick="window.history.go(-1); return false;" type="button" value="Nazad" />
+        </div>
+        <div class="col-xs-4">
+          <button type="submit" name="btn-login" class="btn btn-primary btn-block btn-flat">Prijavi se</button>   
+        </div>
+        <div class="col-xs-10">
+          <a href="reset_pw.html">Zaboravio sam lozinku</a>
+        </div>
+      </div>
+    </form>
+    
+  </div>
+</div>
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../plugins/iCheck/icheck.min.js"></script>
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+    });
+  });
+</script>
+</body>
+
+<!-- Mirrored from www.statitreba.rs/dashboard/pages/login by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jan 2018 20:15:11 GMT -->
+</html>
