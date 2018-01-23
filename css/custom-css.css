@@ -1,0 +1,570 @@
+@charset "utf-8";
+
+#reklama, #login {
+	display: inline;
+}
+.reklama-login {
+	margin-top: 10px;
+}
+.kategorija-vauceri {
+	margin-bottom: 40px;
+	font-size: 17px;
+	line-height: 2;
+}
+#zabava, #automobili, #gradjevinarstvo, #deca, 
+#elektronika-i-racunari, #zabava-i-umetnost, 
+#zdravlje-i-medicina, #kultura, #kuca, #nega-lica-i-tela, 
+#odeca-i-obuca, #pravo-i-ekonomija, #transport, 
+#turizam-i-ugostiteljstvo, #usluge-i-zanatstvo, #lepota, 
+#medicina, #ulaznice, #ugostiteljstvo, #usluge, #putovanja, 
+#kućni-ljubimci, #usluge, #lepota-i-zdravlje, #hrana-i-piće, 
+#edukacija, #sport-i-rekreacija, #ostalo, #proizvodi, #putovanja {
+	height: 35px;
+	width: 274px;
+	border-radius: 3px;
+	background-color: #0795bd; /*#2af452, #007A9C,#20bae4*/
+	display: inline-block;
+	margin-bottom: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+#automobili_vk, #gradjevinarstvo_vk, #deca_vk, #kultura_vk,
+#kuca_vk, #ostalo_vk, #transport, #elektronika-i-racunari_vk,
+#zabava-i-umetnost_vk, #zdravlje-i-medicina_vk,
+#kucni-ljubimci_vk, #nega-lica-i-tela_vk, #odeca-i-obuca_vk,
+#pravo-i-ekonomija_vk, #sport-i-rekreacija_vk, #transport_vk, 
+#turizam-i-ugostiteljstvo_vk, #usluge-i-zanatstvo_vk, #hrana-i-pice_vk {
+	height: 35px;
+	width: 274px;
+	border-radius: 3px;
+	background-color: #0795bd; /*#2af452, #007A9C,#20bae4*/
+	display: inline-block;
+	margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.vaucer-izbor, .vaucer-izbor:hover {
+	color: white;
+	text-decoration: none;
+}
+#programer {
+	color: white;
+	text-align: center;
+}
+
+
+.p {
+  text-align: center;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #06D85F;
+  margin: 80px 0;
+}
+
+.boxs {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 0px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup .p {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+* {box-sizing:border-box}
+
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1110px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active-a {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 5s;
+  animation-name: fade;
+  animation-duration: 5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*body {
+  font: 14px/1 'Open Sans', sans-serif;
+  color: #555;
+  background: #e5e5e5;
+}
+*/
+
+.gallery {
+  /*
+  width: 640px;
+  margin: 0 auto;
+  padding: 5px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+  */
+}
+
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 5px;
+}
+
+.gallery > div > img {
+  display: block;
+  width: 175px;
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > img {
+  transform: scale(1.7,1.7);
+  transition: .3s transform;
+}
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
+
+#br_vaucera {
+  border: 1px solid #ffffff;
+  padding: 1px 4px; 
+  background: #0550655c;
+  width: auto;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+#navbar1 {
+    visibility: visible;
+}
+
+/*CSS ZA SAJT edit BOOTSTRAP*/
+
+.collapse.show {
+    display: initial;
+}
+
+.bg-dark {
+    background-color: #00506b!important;
+    font-family: Cambria, Georgia, serif!important;
+    font-size: 19px;
+    /*background: linear-gradient(to bottom right, #252525, #6b6b6b);*/
+}
+
+.bg-dark-sa-customa {
+	background-color: black;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    /*color: #8fff00c2!important; /*#38caf3*/
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+
+}
+
+.navbar{
+  background-color: #e2e2e2b8!important;
+}
+body {
+   /*background: url("../img/bg.jpg") no-repeat center center fixed;
+    background-color: #cccccc;*/
+    background-color: #e2e2e2b8;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+}
+
+/*KRAJ*/
+
+/*VAUCER KARTICA*/
+
+.cene {
+  display: content;
+  font-size: 19px;
+}
+
+.naslov_preuzeto {
+  display: inline;
+  text-align: justify;
+  text-justify: inter-word;
+  overflow-wrap: ;
+}
+
+#stara_cena {
+  float: left;
+  color: #656565;
+  text-decoration: line-through;
+}
+p {
+  margin-bottom: 0rem;
+  margin-top: 0rem;
+}
+#nova_cena {
+  float: right;
+  color: #4bbf4b;
+}
+
+.card-img-top1 {
+    border-radius: .34rem;
+    margin-top: 2%;
+    width: 96%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
+
+.procenat {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.bottom-right {
+    background-color: #f00;
+    color: white;
+    border: 1px solid white;
+    position: absolute;
+    bottom: 8px; /*8*/
+    right: 16px;
+}
+
+.bottom-left {
+  width: auto;
+  height: auto;
+  background-color: green;
+  color: white;
+  border: 1px solid white;
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/*KRAJ*/
+
+/* ZOOM DIV VAUCER KARTICA*/
+.fond{position:absolute;padding-top:85px;top:0;left:0; right:0;bottom:0;
+ background-color:#00506b;}
+
+.style_prevu_kit
+{
+    display:inline-block;
+    border:0;
+    
+    position: relative;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);   
+
+}
+.style_prevu_kit:hover
+{
+    box-shadow: 0px 0px 150px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+/*KRAJ*/
+
+
+/*KATEGORIJE CSS*/
+
+.kategorija {
+  background-color: #1de2fd59;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 10px 0px 10px 0px;
+  text-align: center;
+}
+
+.item {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+  margin: 0px 5px 0px 5px;
+}
+
+.caption {
+    display: block;
+    text-decoration: none;
+  color: black;
+}
+
+/* DODANO I POMENJENO */
+.jumbotron{
+  background: url(../img/bg.jpg) center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1{
+  font-family: "Montserrat", sans-serif;
+  font-size: 72px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  padding-bottom: 20px;
+}
+
+h2{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  letter-spacing: 5px;
+  padding-bottom: 20px;
+}
+/* SEARCH */
+#okrug {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+}
+input[type="text"] {
+  font-family: FontAwesome;
+  font-size: 20px;
+  color: #fff;
+  background: #00506b;
+  border: none;
+  padding: 10px 0;
+  width: 100%;
+}
+.fa{
+  color: rgb(255, 255, 255);
+  }
+
+/* HOVER EFECT */
+li{
+  transition: background 0.5s linear;
+
+ }
+li:hover{
+  background: #067999;
+  border-radius: 4px;
+}
+
+.scroll_text{
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+/* MOVE DOWN MOUSE */
+.icon {
+  border: 2px solid white;
+  height: 62px;
+  width: 36px;
+  border-radius: 18px;
+  position: relative;
+  top: 80px;
+  background-color: rgba(255,255,255,.05);
+  cursor: pointer;
+}
+
+.icon:before {
+  content: '';
+  background: white;
+  height: 6px;
+  width: 2px;
+  position: absolute;
+  top: 14px;
+  border-radius: 1px;
+  left: calc(50% - 1px);
+  animation: scroll 1.15s infinite;
+}
+
+@keyframes scroll {
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+/* MOVE DOWN MOUSE END */
+
+/* UPUTSTVO */
+.no-hover li{
+  background-color: transparent;
+  color: #000000;
+  list-style-type: none;
+}
+.no-hover a{
+  text-decoration: none;
+}
+
+.sadrzaj ul{
+  display: inline-block
+}
+
+@media screen and (max-width: 426px) {
+.jumbotron h1{
+      font-size:30px;
+  }
+}
