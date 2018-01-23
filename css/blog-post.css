@@ -4,12 +4,30 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-post/blob/master/LICENSE)
  */
 
-body {
-    padding-top: 54px;
+ h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 72px;
+    font-weight: 100;
+    letter-spacing: 5px;
+    padding-bottom: 20px;
+  }
+
+  .fa{
+    color: white;
 }
 
-@media (min-width: 992px) {
-    body {
-        padding-top: 56px;
-    }
+ .bg-dark {
+    background-color: #00506b!important;
+    font-family: Cambria, Georgia, serif!important;
+    font-size: 19px;
+    /*background: linear-gradient(to bottom right, #252525, #6b6b6b);*/
 }
+
+.bg-dark-sa-customa {
+	background-color: black;
+}
+@media screen and (max-width: 426px) {
+     h1{
+          font-size:50px;
+      }
+    }
