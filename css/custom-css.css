@@ -451,7 +451,7 @@ p {
 .caption {
     display: block;
     text-decoration: none;
-  color: black;
+    color: black;
 }
 
 /* DODANO I POMENJENO */
@@ -611,7 +611,7 @@ display:none;
   margin: 4% auto 15% auto;
   border: 1px solid #888;
   width: 40%; 
-padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .inputs input[type=text], input[type=password] {
@@ -651,7 +651,15 @@ padding-bottom: 30px;
 /* POPUP END */
 
 @media screen and (max-width: 426px) {
-.jumbotron h1{
+h1{
       font-size:30px;
   }
+
+.modal-content{
+  width: 90%; 
+}
+.modal-content h1{
+  font-size: 30px;
+}
+
 }
