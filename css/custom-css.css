@@ -24,7 +24,7 @@
 	border-radius: 3px;
 	background-color: #0795bd; /*#2af452, #007A9C,#20bae4*/
 	display: inline-block;
-	margin-bottom: 5px;
+	margin:5px 5px;
   cursor: pointer;
   text-align: center;
 }
@@ -41,6 +41,7 @@
 	display: inline-block;
 	margin-bottom: 5px;
   cursor: pointer;
+  margin:5px 5px;
 }
 
 .vaucer-izbor, .vaucer-izbor:hover {
@@ -52,7 +53,7 @@
 	text-align: center;
 }
 
-
+ 
 .p {
   text-align: center;
   font-family: Tahoma, Arial, sans-serif;
@@ -308,7 +309,9 @@
     font-size: 15px;
 
 }
-
+.nav-item{
+  margin-right: 10px
+}
 .navbar{
   background-color: #e2e2e2b8!important;
 }
@@ -562,6 +565,90 @@ li:hover{
 .sadrzaj ul{
   display: inline-block
 }
+
+/* POPUP */
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 26px;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+font-size:20px;
+}
+button:hover {
+  opacity: 0.8;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+.avatar {
+  width: 200px;
+height:200px;
+  border-radius: 50%;
+}
+
+/* The Modal (background) */
+.modal {
+display:none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 4% auto 15% auto;
+  border: 1px solid #888;
+  width: 40%; 
+padding-bottom: 30px;
+}
+
+.inputs input[type=text], input[type=password] {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 26px;
+  color: rgb(0, 0, 0);
+  background: #ffffff;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size:16px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  animation: zoom 0.6s
+}
+@keyframes zoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+/* POPUP END */
 
 @media screen and (max-width: 426px) {
 .jumbotron h1{
