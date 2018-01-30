@@ -5,6 +5,14 @@
   
 }
 
+.reklama-login .fa{
+  transition: all .5s ease-in-out
+}
+.reklama-login .fa:hover{
+  transform: scale(1.2);
+  transform: rotateX(360deg);
+  color: #0491c0;
+}
 .kategorija-vauceri {
 	margin-bottom: 40px;
 	font-size: 17px;
