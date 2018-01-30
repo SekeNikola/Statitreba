@@ -65,75 +65,70 @@
 <body>
 
 	<!-- NEW NAV -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light ">
-		<div class="container">
-			<a class="navbar-brand" style="font-size: 35px;" href="index.html">
-				<b>
-					<i>Šta ti treba</i>
-				</b>
-			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-			  aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link active" href="index.html">VAUČERI
-							<span class="sr-only">(current)</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="vizit_karta_index.html">VIZIT KARTE
-							<span class="sr-only">(current)</span>
-						</a>
-					</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<li class="nav-item">
-						<a class="nav-link" href="dashboard/pages/register.html">REGISTRUJ SE</a>
-					</li>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">Šta ti treba</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+		    aria-expanded="false" aria-label="Toggle navigation">
+			<span>MENI</span>
+		</button>
 
-					<!-- LOGIN POPUP -->
-					<li class="nav-item">
-						<a onclick="document.getElementById('modal-wrapper').style.display='block'"
-						 class="nav-link">PRIJAVI SE</a>
-					</li>
-					<div id="modal-wrapper" class="modal">
-  
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link active" href="index.html">VAUČERI
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="vizit_karta_index.html">VIZIT KARTE
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<li class="nav-item">
+					<a class="nav-link" href="dashboard/pages/register.html">REGISTRUJ SE</a>
+				</li>
+
+				<!-- LOGIN POPUP -->
+				<li class="nav-item">
+					<a onclick="document.getElementById('modal-wrapper').style.display='block'" class="nav-link">PRIJAVI SE</a>
+				</li>
+				<div id="modal-wrapper" class="modal">
+
 					<form class="modal-content animate" action="/action_page.php">
-						  
-					  <div class="imgcontainer">
-						<span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
-						<h1 class="text-center display-4 ">PRIJAVI SE</h1>
-					  </div>
-				  
-					  <div class="container inputs">
-						<input type="text" placeholder="Enter Username" name="uname">
-						<input type="password" placeholder="Enter Password" name="psw">        
-						<button type="submit">Login</button>
-						<input type="checkbox" style="margin:26px 30px;"> Remember me      
-						<a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
-					  </div>
-					  
-					</form>
-					
-				  </div>
 
-				  <script>
+						<div class="imgcontainer">
+							<span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+							<h1 class="text-center display-4 ">PRIJAVI SE</h1>
+						</div>
+
+						<div class="container inputs">
+							<input type="text" placeholder="Enter Username" name="uname">
+							<input type="password" placeholder="Enter Password" name="psw">
+							<button type="submit">Login</button>
+							<input type="checkbox" style="margin:26px 30px;"> Remember me
+							<a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
+						</div>
+
+					</form>
+
+				</div>
+
+				<script>
 					// If user clicks anywhere outside of the modal, Modal will close
-					
+
 					var modal = document.getElementById('modal-wrapper');
-					window.onclick = function(event) {
+					window.onclick = function (event) {
 						if (event.target == modal) {
 							modal.style.display = "none";
 						}
 					}
-					</script>
-					<!-- LOGIN POPUP END -->
-					<li class="nav-item">
-						<a class="nav-link" href="uputstvo.html" target="_blank">UPUTSTVO</a>
-					</li>
-				</ul>
-			</div>
+				</script>
+				<!-- LOGIN POPUP END -->
+				<li class="nav-item">
+					<a class="nav-link" href="uputstvo.html" target="_blank">UPUTSTVO</a>
+				</li>
+			</ul>
+		</div>
 		</div>
 	</nav>
 	<!-- NEW NAV END -->
@@ -195,14 +190,16 @@
 				<input type="text" name="search" value="&#xf002">
 			</div>
 		</form>
-		<div class="icon"></div>
+		<!-- <div class="icon"></div> -->
 	</div>
 	<!-- JUMBOTRON END -->
 
 	<!-- VAUCERI -->
-	<div class="container">
+	<div class="container-fluid" style="padding:0;">
 		<div class="kategorija-vauceri" align="center">
-			<div align="center" class="reklama-login">
+			<div align="center" class="reklama-login" style="
+			background: #00506b;
+		">
 				<div class="slideshow-container">
 				</div>
 				<br>
@@ -224,423 +221,437 @@
 						setTimeout(showSlides, 5000);
 					}
 				</script>
-				<div id="scroll_text " style="margin-bottom: 30px;">
-					<p>Preizmite Vaš VAUČER bez registracije, bez logovanja i bez uplate. Ukoliko imate proizvod ili nudite uslugu po promotivnim
-						cenama, postavite samostalno i potpuno besplatno Vaš Vaučer ili Vašu Vizi kartu tako što ćete se prethodno registrovati.
-						</p>
+				<div id="scroll_text ">
+
 				</div>
 				<div id="automobili" onclick="window.location='kategorije?link=Automobili&amp;okrug='">
 					<a href="kategorije?link=Automobili&amp;okrug=" class="vaucer-izbor">
-						Automobili
+						<i class="fa fa-car fa-3x" aria-hidden="true"></i>
+						<br> Automobili
 						<span id="">(1)</span>
 					</a>
 				</div>
 				<div id="edukacija" onclick="window.location='kategorije?link=Edukacija&amp;okrug='">
 					<a href="kategorije?link=Edukacija&amp;okrug=" class="vaucer-izbor">
-						Edukacija
+						<i class="fa fa-book fa-3x" aria-hidden="true"></i>
+						<br> Edukacija
 						<span id="">(0)</span>
 					</a>
 				</div>
 				<div id="zabava" onclick="window.location='kategorije?link=Zabava&amp;okrug='">
 					<a href="kategorije?link=Zabava&amp;okrug=" class="vaucer-izbor">
-						Zabava
+						<i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
+						<br> Zabava
 						<span id="">(0)</span>
 					</a>
 				</div>
 				<div id="kućni-ljubimci" onclick="window.location='kategorije?link=Kućni%20ljubimci&amp;okrug='">
 					<a href="kategorije?link=Kućni%20ljubimci&amp;okrug=" class="vaucer-izbor">
-						Kućni ljubimci
+						<i class="fa fa-paw fa-3x" aria-hidden="true"></i>
+						<br> Kućni ljubimci
 						<span id="">(0)</span>
 					</a>
 				</div>
 				<div id="lepota" onclick="window.location='kategorije?link=Lepota&amp;okrug='">
 					<a href="kategorije?link=Lepota&amp;okrug=" class="vaucer-izbor">
-						Lepota
+						<i class="fa fa-scissors fa-3x" aria-hidden="true"></i>
+						<br> Lepota
 						<span id="">(0)</span>
 					</a>
 				</div>
 				<div id="medicina" onclick="window.location='kategorije?link=Medicina&amp;okrug='">
 					<a href="kategorije?link=Medicina&amp;okrug=" class="vaucer-izbor">
-						Medicina
+						<i class="fa fa-medkit fa-3x" aria-hidden="true"></i>
+						<br> Medicina
 						<span id="">(0)</span>
 					</a>
 				</div>
 				<div id="sport-i-rekreacija" onclick="window.location='kategorije?link=Sport%20i%20rekreacija&amp;okrug='">
 					<a href="kategorije?link=Sport%20i%20rekreacija&amp;okrug=" class="vaucer-izbor">
-						Sport i rekreacija
+						<i class="fa fa-futbol-o fa-3x" aria-hidden="true"></i>
+						<br> Sport i rekreacija
 						<span id="">(1)</span>
 					</a>
 				</div>
 				<div id="hrana-i-piće" onclick="window.location='kategorije?link=Hrana%20i%20piće&amp;okrug='">
 					<a href="kategorije?link=Hrana%20i%20piće&amp;okrug=" class="vaucer-izbor">
-						Hrana i piće
+						<i class="fa fa-cutlery fa-3x" aria-hidden="true"></i>
+						<br> Hrana i piće
 						<span id="">(0)</span>
 					</a>
 				</div>
 				<div id="proizvodi" onclick="window.location='kategorije?link=Proizvodi&amp;okrug='">
 					<a href="kategorije?link=Proizvodi&amp;okrug=" class="vaucer-izbor">
-						Proizvodi
+						<i class="fa fa-dropbox fa-3x" aria-hidden="true"></i>
+						<br> Proizvodi
 						<span id="">(2)</span>
 					</a>
 				</div>
 				<div id="putovanja" onclick="window.location='kategorije?link=Putovanja&amp;okrug='">
 					<a href="kategorije?link=Putovanja&amp;okrug=" class="vaucer-izbor">
-						Putovanja
+						<i class="fa fa-suitcase fa-3x" aria-hidden="true"></i>
+						<br> Putovanja
 						<span id="">(0)</span>
 					</a>
 				</div>
 				<div id="usluge" onclick="window.location='kategorije?link=Usluge&amp;okrug='">
 					<a href="kategorije?link=Usluge&amp;okrug=" class="vaucer-izbor">
-						Usluge
+						<i class="fa fa-cogs fa-3x" aria-hidden="true"></i>
+						<br> Usluge
 						<span id="">(2)</span>
 					</a>
 				</div>
 				<div id="ostalo" onclick="window.location='kategorije?link=Ostalo&amp;okrug='">
 					<a href="kategorije?link=Ostalo&amp;okrug=" class="vaucer-izbor">
-						Ostalo
+						<i class="fa fa-ellipsis-h  fa-3x" aria-hidden="true"></i>
+						<br> Ostalo
 						<span id="">(1)</span>
 					</a>
 				</div>
 			</div>
+
 			<br>
-			<div class="row">
-				<div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
-					<div class="card h-100 style_prevu_kit" style="padding: 10px;box-shadow: 1px 1px #7d7d7d;border-radius: .49rem; background-color: white;">
-						<div class="procenat">
-							<a href="vaucer?link=H4wwfBKFydu">
-								<img class="card-img-top1" src="dashboard/post_img/" height="180" width="288">
-							</a>
-							<div class="bottom-left">
-								&nbsp;
-								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png"
-								  width="20" height="20"> 0 &nbsp;
+			<div class="container">
+				<p class="mb-4">Preizmite Vaš VAUČER bez registracije, bez logovanja i bez uplate. Ukoliko imate proizvod ili nudite uslugu po promotivnim
+					cenama, postavite samostalno i potpuno besplatno Vaš Vaučer ili Vašu Vizi kartu tako što ćete se prethodno registrovati.
+				</p>
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
+							<div class="card h-100 style_prevu_kit" style="padding: 10px;box-shadow: 1px 1px #7d7d7d;border-radius: .49rem; background-color: white;">
+									<div class="procenat">
+								<a href="vaucer?link=H4wwfBKFydu">
+									<img class="card-img-top1" src="dashboard/post_img/" height="180" width="288">
+								</a>
+								<div class="bottom-left">
+									&nbsp;
+									<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png"
+									    width="20" height="20"> 0 &nbsp;
+								</div>
+								<div class="bottom-right">
+									&nbsp; -11% &nbsp;
+								</div>
 							</div>
-							<div class="bottom-right">
-								&nbsp; -11% &nbsp;
-							</div>
-						</div>
-						<div class="card-body">
-							<div class="naslov_preuzeto">
-								<h6 class="card-title" style="margin-bottom: 0px;">
-									<a href="vaucer?link=H4wwfBKFydu">
-										<p style="float: left; color: #656565;  font-size: 19px;">
-											Presvlacenje volana Simanovci </p>
-									</a>
-									<!--<p style="text-align: right; color: #656565; font-size: 19px; color: #3c3c3c;"> 
+							<div class="card-body">
+								<div class="naslov_preuzeto">
+									<h6 class="card-title" style="margin-bottom: 0px;">
+										<a href="vaucer?link=H4wwfBKFydu">
+											<p style="float: left; color: #656565;  font-size: 19px;">
+												Presvlacenje volana Simanovci </p>
+										</a>
+										<!--<p style="text-align: right; color: #656565; font-size: 19px; color: #3c3c3c;"> 
 							            Preuzeto:
 							            0						        		</p>-->
-								</h6>
-							</div>
-							<br>
-							<div class="cene">
-								<p id="stara_cena">
-									<b>2250 DIN</b>
-								</p>
-								<p id="nova_cena">
-									<b>2000 DIN</b>
-								</p>
+									</h6>
+								</div>
+								<br>
+								<div class="cene">
+									<p id="stara_cena">
+										<b>2250 DIN</b>
+									</p>
+									<p id="nova_cena">
+										<b>2000 DIN</b>
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
-					<div class="card h-100 style_prevu_kit" style="padding: 10px;box-shadow: 1px 1px #7d7d7d;border-radius: .49rem; background-color: white;">
-						<div class="procenat">
-							<a href="vaucer?link=PcO0yI">
-								<img class="card-img-top1" src="dashboard/post_img/1516036544.jpg" height="180" width="288">
-							</a>
-							<div class="bottom-left">
-								&nbsp;
-								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png"
-								  width="20" height="20"> 1 &nbsp;
+					<div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
+						<div class="card h-100 style_prevu_kit" style="padding: 10px;box-shadow: 1px 1px #7d7d7d;border-radius: .49rem; background-color: white;">
+							<div class="procenat">
+								<a href="vaucer?link=PcO0yI">
+									<img class="card-img-top1" src="dashboard/post_img/1516036544.jpg" height="180" width="288">
+								</a>
+								<div class="bottom-left">
+									&nbsp;
+									<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png"
+									    width="20" height="20"> 1 &nbsp;
+								</div>
+								<div class="bottom-right">
+									&nbsp; -50% &nbsp;
+								</div>
 							</div>
-							<div class="bottom-right">
-								&nbsp; -50% &nbsp;
-							</div>
-						</div>
-						<div class="card-body">
-							<div class="naslov_preuzeto">
-								<h6 class="card-title" style="margin-bottom: 0px;">
-									<a href="vaucer?link=PcO0yI">
-										<p style="float: left; color: #656565;  font-size: 19px;">
-											50% Popusta za prvi mesec treniranja nindjucua </p>
-									</a>
-									<!--<p style="text-align: right; color: #656565; font-size: 19px; color: #3c3c3c;"> 
+							<div class="card-body">
+								<div class="naslov_preuzeto">
+									<h6 class="card-title" style="margin-bottom: 0px;">
+										<a href="vaucer?link=PcO0yI">
+											<p style="float: left; color: #656565;  font-size: 19px;">
+												50% Popusta za prvi mesec treniranja nindjucua </p>
+										</a>
+										<!--<p style="text-align: right; color: #656565; font-size: 19px; color: #3c3c3c;"> 
 							            Preuzeto:
 							            1						        		</p>-->
-								</h6>
-							</div>
-							<br>
-							<div class="cene">
-								<p id="stara_cena">
-									<b>3000 DIN</b>
-								</p>
-								<p id="nova_cena">
-									<b>1500 DIN</b>
-								</p>
+									</h6>
+								</div>
+								<br>
+								<div class="cene">
+									<p id="stara_cena">
+										<b>3000 DIN</b>
+									</p>
+									<p id="nova_cena">
+										<b>1500 DIN</b>
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
-					<div class="card h-100 style_prevu_kit" style="padding: 10px;box-shadow: 1px 1px #7d7d7d;border-radius: .49rem; background-color: white;">
-						<div class="procenat">
-							<a href="vaucer?link=ZywssBKBQtJ">
-								<img class="card-img-top1" src="dashboard/post_img/1515629575.png" height="180" width="288">
-							</a>
-							<div class="bottom-left">
-								&nbsp;
-								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png"
-								  width="20" height="20"> 0 &nbsp;
+					<div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
+						<div class="card h-100 style_prevu_kit" style="padding: 10px;box-shadow: 1px 1px #7d7d7d;border-radius: .49rem; background-color: white;">
+							<div class="procenat">
+								<a href="vaucer?link=ZywssBKBQtJ">
+									<img class="card-img-top1" src="dashboard/post_img/1515629575.png" height="180" width="288">
+								</a>
+								<div class="bottom-left">
+									&nbsp;
+									<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png"
+									    width="20" height="20"> 0 &nbsp;
+								</div>
+								<div class="bottom-right">
+									&nbsp; -25% &nbsp;
+								</div>
 							</div>
-							<div class="bottom-right">
-								&nbsp; -25% &nbsp;
-							</div>
-						</div>
-						<div class="card-body">
-							<div class="naslov_preuzeto">
-								<h6 class="card-title" style="margin-bottom: 0px;">
-									<a href="vaucer?link=ZywssBKBQtJ">
-										<p style="float: left; color: #656565;  font-size: 19px;">
-											PC servis Zemun </p>
-									</a>
-									<!--<p style="text-align: right; color: #656565; font-size: 19px; color: #3c3c3c;"> 
+							<div class="card-body">
+								<div class="naslov_preuzeto">
+									<h6 class="card-title" style="margin-bottom: 0px;">
+										<a href="vaucer?link=ZywssBKBQtJ">
+											<p style="float: left; color: #656565;  font-size: 19px;">
+												PC servis Zemun </p>
+										</a>
+										<!--<p style="text-align: right; color: #656565; font-size: 19px; color: #3c3c3c;"> 
 							            Preuzeto:
 							            0						        		</p>-->
-								</h6>
-							</div>
-							<br>
-							<div class="cene">
-								<p id="stara_cena">
-									<b>2000 DIN</b>
-								</p>
-								<p id="nova_cena">
-									<b>1500 DIN</b>
-								</p>
+									</h6>
+								</div>
+								<br>
+								<div class="cene">
+									<p id="stara_cena">
+										<b>2000 DIN</b>
+									</p>
+									<p id="nova_cena">
+										<b>1500 DIN</b>
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
-					<div class="card h-100 style_prevu_kit" style="padding: 10px;box-shadow: 1px 1px #7d7d7d;border-radius: .49rem; background-color: white;">
-						<div class="procenat">
-							<a href="vaucer?link=mqgHypf">
-								<img class="card-img-top1" src="dashboard/post_img/1515534136.jpg" height="180" width="288">
-							</a>
-							<div class="bottom-left">
-								&nbsp;
-								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png"
-								  width="20" height="20"> 1 &nbsp;
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
+						<div class="card h-100 style_prevu_kit" style="padding: 10px;box-shadow: 1px 1px #7d7d7d;border-radius: .49rem; background-color: white;">
+							<div class="procenat">
+								<a href="vaucer?link=mqgHypf">
+									<img class="card-img-top1" src="dashboard/post_img/1515534136.jpg" height="180" width="288">
+								</a>
+								<div class="bottom-left">
+									&nbsp;
+									<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png"
+									    width="20" height="20"> 1 &nbsp;
+								</div>
+								<div class="bottom-right">
+									&nbsp; -15% &nbsp;
+								</div>
 							</div>
-							<div class="bottom-right">
-								&nbsp; -15% &nbsp;
-							</div>
-						</div>
-						<div class="card-body">
-							<div class="naslov_preuzeto">
-								<h6 class="card-title" style="margin-bottom: 0px;">
-									<a href="vaucer?link=mqgHypf">
-										<p style="float: left; color: #656565;  font-size: 19px;">
-											15 % popusta za izradu gipsarskih radova </p>
-									</a>
-									<!--<p style="text-align: right; color: #656565; font-size: 19px; color: #3c3c3c;"> 
+							<div class="card-body">
+								<div class="naslov_preuzeto">
+									<h6 class="card-title" style="margin-bottom: 0px;">
+										<a href="vaucer?link=mqgHypf">
+											<p style="float: left; color: #656565;  font-size: 19px;">
+												15 % popusta za izradu gipsarskih radova </p>
+										</a>
+										<!--<p style="text-align: right; color: #656565; font-size: 19px; color: #3c3c3c;"> 
 							            Preuzeto:
 							            1						        		</p>-->
-								</h6>
-							</div>
-							<br>
-							<div class="cene">
-								<p id="stara_cena">
-									<b>4 €</b>
-								</p>
-								<p id="nova_cena">
-									<b>3.4 €</b>
-								</p>
+									</h6>
+								</div>
+								<br>
+								<div class="cene">
+									<p id="stara_cena">
+										<b>4 €</b>
+									</p>
+									<p id="nova_cena">
+										<b>3.4 €</b>
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
-					<div class="card h-100 style_prevu_kit" style="padding: 10px;box-shadow: 1px 1px #7d7d7d;border-radius: .49rem; background-color: white;">
-						<div class="procenat">
-							<a href="vaucer?link=5gpSipMiPP">
-								<img class="card-img-top1" src="dashboard/post_img/stolice.jpg" height="180" width="288">
-							</a>
-							<div class="bottom-left">
-								&nbsp;
-								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png"
-								  width="20" height="20"> 1 &nbsp;
+					<div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
+						<div class="card h-100 style_prevu_kit" style="padding: 10px;box-shadow: 1px 1px #7d7d7d;border-radius: .49rem; background-color: white;">
+							<div class="procenat">
+								<a href="vaucer?link=5gpSipMiPP">
+									<img class="card-img-top1" src="dashboard/post_img/stolice.jpg" height="180" width="288">
+								</a>
+								<div class="bottom-left">
+									&nbsp;
+									<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png"
+									    width="20" height="20"> 1 &nbsp;
+								</div>
+								<div class="bottom-right">
+									&nbsp; -33% &nbsp;
+								</div>
 							</div>
-							<div class="bottom-right">
-								&nbsp; -33% &nbsp;
-							</div>
-						</div>
-						<div class="card-body">
-							<div class="naslov_preuzeto">
-								<h6 class="card-title" style="margin-bottom: 0px;">
-									<a href="vaucer?link=5gpSipMiPP">
-										<p style="float: left; color: #656565;  font-size: 19px;">
-											Ukrasna stolica od drvenih štipaljki </p>
-									</a>
-									<!--<p style="text-align: right; color: #656565; font-size: 19px; color: #3c3c3c;"> 
+							<div class="card-body">
+								<div class="naslov_preuzeto">
+									<h6 class="card-title" style="margin-bottom: 0px;">
+										<a href="vaucer?link=5gpSipMiPP">
+											<p style="float: left; color: #656565;  font-size: 19px;">
+												Ukrasna stolica od drvenih štipaljki </p>
+										</a>
+										<!--<p style="text-align: right; color: #656565; font-size: 19px; color: #3c3c3c;"> 
 							            Preuzeto:
 							            1						        		</p>-->
-								</h6>
-							</div>
-							<br>
-							<div class="cene">
-								<p id="stara_cena">
-									<b>1500 DIN</b>
-								</p>
-								<p id="nova_cena">
-									<b>1000 DIN</b>
-								</p>
+									</h6>
+								</div>
+								<br>
+								<div class="cene">
+									<p id="stara_cena">
+										<b>1500 DIN</b>
+									</p>
+									<p id="nova_cena">
+										<b>1000 DIN</b>
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
-					<div class="card h-100 style_prevu_kit" style="padding: 10px;box-shadow: 1px 1px #7d7d7d;border-radius: .49rem; background-color: white;">
-						<div class="procenat">
-							<a href="vaucer?link=4qhRrwC">
-								<img class="card-img-top1" src="dashboard/post_img/Bunar.jpg" height="180" width="288">
-							</a>
-							<div class="bottom-left">
-								&nbsp;
-								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png"
-								  width="20" height="20"> 2 &nbsp;
+					<div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
+						<div class="card h-100 style_prevu_kit" style="padding: 10px;box-shadow: 1px 1px #7d7d7d;border-radius: .49rem; background-color: white;">
+							<div class="procenat">
+								<a href="vaucer?link=4qhRrwC">
+									<img class="card-img-top1" src="dashboard/post_img/Bunar.jpg" height="180" width="288">
+								</a>
+								<div class="bottom-left">
+									&nbsp;
+									<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png"
+									    width="20" height="20"> 2 &nbsp;
+								</div>
+								<div class="bottom-right">
+									&nbsp; -33% &nbsp;
+								</div>
 							</div>
-							<div class="bottom-right">
-								&nbsp; -33% &nbsp;
-							</div>
-						</div>
-						<div class="card-body">
-							<div class="naslov_preuzeto">
-								<h6 class="card-title" style="margin-bottom: 0px;">
-									<a href="vaucer?link=4qhRrwC">
-										<p style="float: left; color: #656565;  font-size: 19px;">
-											Ukrasni bunar od drvenih štipaljki </p>
-									</a>
-									<!--<p style="text-align: right; color: #656565; font-size: 19px; color: #3c3c3c;"> 
+							<div class="card-body">
+								<div class="naslov_preuzeto">
+									<h6 class="card-title" style="margin-bottom: 0px;">
+										<a href="vaucer?link=4qhRrwC">
+											<p style="float: left; color: #656565;  font-size: 19px;">
+												Ukrasni bunar od drvenih štipaljki </p>
+										</a>
+										<!--<p style="text-align: right; color: #656565; font-size: 19px; color: #3c3c3c;"> 
 							            Preuzeto:
 							            2						        		</p>-->
-								</h6>
-							</div>
-							<br>
-							<div class="cene">
-								<p id="stara_cena">
-									<b>3600 DIN</b>
-								</p>
-								<p id="nova_cena">
-									<b>2400 DIN</b>
-								</p>
+									</h6>
+								</div>
+								<br>
+								<div class="cene">
+									<p id="stara_cena">
+										<b>3600 DIN</b>
+									</p>
+									<p id="nova_cena">
+										<b>2400 DIN</b>
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
-					<div class="card h-100 style_prevu_kit" style="padding: 10px;box-shadow: 1px 1px #7d7d7d;border-radius: .49rem; background-color: white;">
-						<div class="procenat">
-							<a href="vaucer?link=qkypJt">
-								<img class="card-img-top1" src="dashboard/post_img/Pelet_slika_1_sredjeno.jpg" height="180" width="288">
-							</a>
-							<div class="bottom-left">
-								&nbsp;
-								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png"
-								  width="20" height="20"> 3 &nbsp;
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
+						<div class="card h-100 style_prevu_kit" style="padding: 10px;box-shadow: 1px 1px #7d7d7d;border-radius: .49rem; background-color: white;">
+							<div class="procenat">
+								<a href="vaucer?link=qkypJt">
+									<img class="card-img-top1" src="dashboard/post_img/Pelet_slika_1_sredjeno.jpg" height="180" width="288">
+								</a>
+								<div class="bottom-left">
+									&nbsp;
+									<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png"
+									    width="20" height="20"> 3 &nbsp;
+								</div>
+								<div class="bottom-right">
+									&nbsp; -5% &nbsp;
+								</div>
 							</div>
-							<div class="bottom-right">
-								&nbsp; -5% &nbsp;
-							</div>
-						</div>
-						<div class="card-body">
-							<div class="naslov_preuzeto">
-								<h6 class="card-title" style="margin-bottom: 0px;">
-									<a href="vaucer?link=qkypJt">
-										<p style="float: left; color: #656565;  font-size: 19px;">
-											Prodaja peleta </p>
-									</a>
-									<!--<p style="text-align: right; color: #656565; font-size: 19px; color: #3c3c3c;"> 
+							<div class="card-body">
+								<div class="naslov_preuzeto">
+									<h6 class="card-title" style="margin-bottom: 0px;">
+										<a href="vaucer?link=qkypJt">
+											<p style="float: left; color: #656565;  font-size: 19px;">
+												Prodaja peleta </p>
+										</a>
+										<!--<p style="text-align: right; color: #656565; font-size: 19px; color: #3c3c3c;"> 
 							            Preuzeto:
 							            3						        		</p>-->
-								</h6>
-							</div>
-							<br>
-							<div class="cene">
-								<p id="stara_cena">
-									<b>380 DIN</b>
-								</p>
-								<p id="nova_cena">
-									<b>360 DIN</b>
-								</p>
+									</h6>
+								</div>
+								<br>
+								<div class="cene">
+									<p id="stara_cena">
+										<b>380 DIN</b>
+									</p>
+									<p id="nova_cena">
+										<b>360 DIN</b>
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<!-- NUMBERS OF PAGE -->
+			<ul class="pagination justify-content-center">
+				<li class='page-item active'>
+					<a class='page-link' href='index83a0.html?page_no=1'>1</a>
+				</li>
+			</ul>
+			<!-- NUMBERS OF PAGE END-->
 		</div>
-	</div>
+		<!-- VAUCERI END -->
 
-	<!-- NUMBERS OF PAGE -->
-	<ul class="pagination justify-content-center">
-		<li class='page-item active'>
-			<a class='page-link' href='index83a0.html?page_no=1'>1</a>
-		</li>
-	</ul>
-	<!-- NUMBERS OF PAGE END-->
-	</div>
-	<!-- VAUCERI END -->
-
-	<!-- FOOTER -->
-	<footer class="py-5 bg-dark-sa-customa">
-		<div class="container">
-			<div class="dokumenti text-center">
-				<a href="https://www.facebook.com/Šta-ti-treba-210599926175834/" target="_blank">
-					<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
-				</a>
-				&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="https://www.instagram.com/sta_ti_treba_/" target="_blank">
-					<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
-				</a>
-				<br>
-				<br>
-				<a href="kontakt.html">Kontakt</a>&nbsp; &nbsp;
-				<a href="sugestije.html">Sugestije</a>&nbsp; &nbsp;
-				<a href="#">Video prezentacija</a>&nbsp; &nbsp;
-				<a href="dashboard/dokumenti/Uslovi.pdf" target="_blank">Uslovi</a>
-				&nbsp; &nbsp;
-				<a href="dashboard/dokumenti/uputstvo.pdf" target="_blank">Uputstvo</a>
-				&nbsp;
+		<!-- FOOTER -->
+		<footer class="py-5 bg-dark-sa-customa">
+			<div class="container">
+				<div class="dokumenti text-center">
+					<a href="https://www.facebook.com/Šta-ti-treba-210599926175834/" target="_blank">
+						<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+					</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="https://www.instagram.com/sta_ti_treba_/" target="_blank">
+						<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+					</a>
+					<br>
+					<br>
+					<a href="kontakt.html">Kontakt</a>&nbsp; &nbsp;
+					<a href="sugestije.html">Sugestije</a>&nbsp; &nbsp;
+					<a href="#">Video prezentacija</a>&nbsp; &nbsp;
+					<a href="dashboard/dokumenti/Uslovi.pdf" target="_blank">Uslovi</a>
+					&nbsp; &nbsp;
+					<a href="dashboard/dokumenti/uputstvo.pdf" target="_blank">Uputstvo</a>
+					&nbsp;
+				</div>
+				<p class="m-0 text-center text-white">office@statitreba.rs</p>
+				<p class="m-0 text-center text-white">Copyright &copy; statitreba.rs 2018.</p>
 			</div>
-			<p class="m-0 text-center text-white">office@statitreba.rs</p>
-			<p class="m-0 text-center text-white">Copyright &copy; statitreba.rs 2018.</p>
-		</div>
-	</footer>
-	<!-- FOOTER END -->
+		</footer>
+		<!-- FOOTER END -->
 
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
 
-	<!-- SCRIPTS -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111546408-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
+		<!-- SCRIPTS -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111546408-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
 
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
 
-		gtag('config', 'UA-111546408-1');
-	</script>
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="vendor/popper/popper.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	<!-- SCRIPTS END-->
+			gtag('config', 'UA-111546408-1');
+		</script>
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/popper/popper.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<!-- SCRIPTS END-->
 
 </body>
 <!-- Mirrored from www.statitreba.rs/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jan 2018 20:14:53 GMT -->
